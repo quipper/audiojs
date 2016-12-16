@@ -68,7 +68,7 @@
           <div class="play-pause"> \
             <p class="play"></p> \
             <p class="pause"></p> \
-            <p class="loading"></p> \
+            <p class="charging"></p> \
             <p class="error"></p> \
           </div> \
           <div class="scrubber"> \
@@ -88,7 +88,7 @@
         playedClass: 'played',
         errorMessageClass: 'error-message',
         playingClass: 'playing',
-        loadingClass: 'loading',
+        loadingClass: 'charging',
         errorClass: 'error'
       },
       // The css used by the default player. This is is dynamically injected into a `<style>` tag in the top of the head.
@@ -117,7 +117,7 @@
         .audiojs .error-message a { color: #eee; text-decoration: none; padding-bottom: 1px; border-bottom: 1px solid #999; white-space: wrap; } \
         \
         .audiojs .play { background: url("$1") -2px -1px no-repeat; } \
-        .audiojs .loading { background: url("$1") -2px -31px no-repeat; } \
+        .audiojs .charging { background: url("$1") -2px -31px no-repeat; } \
         .audiojs .error { background: url("$1") -2px -61px no-repeat; } \
         .audiojs .pause { background: url("$1") -2px -91px no-repeat; } \
         \
@@ -126,7 +126,7 @@
           only screen and (min-moz-device-pixel-ratio: 2), \
           only screen and (-o-min-device-pixel-ratio: 2/1), \
           only screen and (min-device-pixel-ratio: 2) { \
-            .audiojs .play, .audiojs .loading, .audiojs .error, .audiojs .pause { \
+            .audiojs .play, .audiojs .charging, .audiojs .error, .audiojs .pause { \
               background-image: url("$2"); \
               -webkit-background-size: 30px 120px; \
               -moz-background-size: 30px 120px; \
@@ -135,13 +135,13 @@
             } \
         } \
         \
-        .playing .play, .playing .loading, .playing .error { display: none; } \
+        .playing .play, .playing .charging, .playing .error { display: none; } \
         .playing .pause { display: block; } \
         \
-        .loading .play, .loading .pause, .loading .error { display: none; } \
-        .loading .loading { display: block; } \
+        .charging .play, .charging .pause, .charging .error { display: none; } \
+        .charging .charging { display: block; } \
         \
-        .error .time, .error .play, .error .pause, .error .scrubber, .error .loading { display: none; } \
+        .error .time, .error .play, .error .pause, .error .scrubber, .error .charging { display: none; } \
         .error .error { display: block; } \
         .error .play-pause p { cursor: auto; } \
         .error .error-message { display: block; }',

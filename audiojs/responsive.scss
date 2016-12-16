@@ -1,0 +1,96 @@
+// this file require quipper mixins
+
+$timer-size: 25px;
+$control-size: 25px;
+
+.audiojs{
+  width: 100%;
+  height: 45px;
+  display: block;
+  margin: 0 0 15px 0;
+  max-width: 380px;
+  background: #18b3dc;
+  overflow: hidden;
+  font-family: "Open Sans", monospace;
+  font-size: 12px;
+  padding: 0;
+  border-radius: 3px;
+  background-image: 
+    -webkit-gradient(
+      linear, 
+      left top, 
+      left bottom, 
+      color-stop(0, #18b3dc), 
+      color-stop(0.5, #23a2c3), 
+      color-stop(0.51, #18b3dc), 
+      color-stop(1, #18b3dc)
+    );
+  background-image: -moz-linear-gradient(center top, #18b3dc 0%, #23a2c3 50%, #18b3dc 51%, #18b3dc 100%);
+  -webkit-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+  .play-pause {
+    width: 7%;
+    min-width: 30px;
+    height: 100%;
+    padding: 0;
+    padding-left: 5px;
+    margin: 0px auto;
+    display: inline-block;
+    overflow: hidden;
+    border: none;
+    line-height: 45px;
+    p{
+      width: 100%;
+      height: 30px;
+      margin: 9px 0px 0px 0px;
+      cursor: pointer;
+      vertical-align: middle;
+    }
+  }
+  .scrubber {
+    width: 45%;
+    position: relative;
+    background: #060606;
+    height: 10px;
+    margin: 0px;
+    border: 0px;
+    padding-top: 11px;
+    overflow: hidden;
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 0px;
+    margin-left: 10px;
+    @include media-breakpoint-up(sm){
+      width: 60%;
+      max-width: 285px;
+    }
+    @include media-breakpoint-up(md){
+      width: 53%;
+      max-width: 235px;
+    }
+    .progress{
+      border-radius: 0px;
+      line-height: inherit;
+      margin: 0px;
+      padding: 0px;
+      height: 100%;
+    }
+  }
+  .time {
+    float: none;
+    display: inline-block;
+    height: 45px;
+    width: 24%;
+    line-height: 45px;
+    margin: 0px 0px 0px 6px;
+    padding: 0px 6px 0px 12px;
+    border-left: none;
+    color: #ddd;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+    font-size: 11px;
+  }
+}
